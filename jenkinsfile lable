@@ -1,0 +1,25 @@
+pipeline {
+    agent { lable "slave1" }
+
+    stages {
+        stage('stage 1') {
+            steps {
+                echo "This is stage one"
+                sh '''
+                    sleep 20
+                    echo "This is linux command"
+                '''
+            }
+        }
+    
+        stage('Build') {
+            steps {
+                echo "This is stage Built"
+                sh '''
+                    #!/bin/bash
+                    sleep 20
+                '''
+            }
+        }
+    }
+}
