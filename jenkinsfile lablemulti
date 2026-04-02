@@ -1,6 +1,6 @@
 pipeline {
      agent { label 'Slave && Slave1' }
-     agent { label 'Slave || Slave1' }
+   // agent { label 'Slave || Slave1' }
    // agent { label '!master' } // Run on nodes wihtout label master
     
     stages {
